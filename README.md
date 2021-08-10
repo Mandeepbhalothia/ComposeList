@@ -5,5 +5,4 @@ JetPack Compose
 Dagger Hilt
 MVVM
 Coil
-Anima
 Accompanist Navigation Animation
