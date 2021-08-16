@@ -57,12 +57,12 @@ fun Navigation() {
                 ) + fadeOut(animationSpec = tween(AnimationDuration))
             },
             arguments = listOf(
-                navArgument("id") {
+                navArgument(Constants.ScreenEndPoints.DetailsScreen_ID) {
                     type = NavType.IntType
                 }
             )) {
-            val id = it.arguments?.getInt("id") ?: -1
-            Log.d("Navigation", "id is: $id")
+            val id = it.arguments?.getInt(Constants.ScreenEndPoints.DetailsScreen_ID) ?: -1
+            Log.d("Navigation", "${Constants.ScreenEndPoints.DetailsScreen_ID} is: $id")
             DetailsScreen(navController = navController, id = id)
         }
 

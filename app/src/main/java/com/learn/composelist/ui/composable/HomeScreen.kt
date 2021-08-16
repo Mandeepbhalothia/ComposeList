@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.annotation.ExperimentalCoilApi
+import com.learn.composelist.ui.util.Constants
 import com.learn.composelist.viewmodel.MainViewModel
 
 @ExperimentalCoilApi
@@ -29,7 +30,7 @@ fun HomeScreen(
             items(chatList) {
                 Log.d("HomeScreen", "Item: $it")
                 RowItem(chat = it, onClick = { id ->
-                    navController.navigate("item_details_screen/$id")
+                    navController.navigate("${Constants.ScreenEndPoints.DetailsScreen_Root}/$id")
                 })
                 Spacer(modifier = Modifier.height(8.dp))
             }
